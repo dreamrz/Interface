@@ -29,3 +29,19 @@
 ### 抬高到2D后启动小地图预览UMG
 任意地方调用`globa widget part 1`比如:<br>
 ![](https://github.com/dreamrz/Interface/blob/main/6.JPG)
+
+# 对方的按钮或事件触发如何获取?
+### 初始步骤
+1. 引擎里菜单 `编辑` -> `项目设置` -> `地图和模式` -> `游戏实例类` 设置为 `DataGameInstance`
+### 如何使用
+1. 找到引擎资产的内容根目录下 `DataGameInstance` 蓝图,并打开.
+2. 蓝图如下:<br>
+![](https://github.com/dreamrz/Interface/blob/main/returnevent1.JPG)<br>
+当被触发后会执行这里,将需要做的内容按需在后面进行编辑.(对方已不再编辑该蓝图,后续将由操作者自行编辑)
+
+### 返回的事件 `点击人物后`
+操作的界面:<br>
+![](https://github.com/dreamrz/Interface/blob/main/button1.JPG)<br>
+
+消息: `ClickPlayer`<br>
+在`DataGameInstance` 蓝图中的switch string里加入`ClickPlayer`然后进行后续操作.
