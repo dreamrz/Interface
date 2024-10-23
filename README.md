@@ -4,6 +4,9 @@
 
 # 从哪里开始
 完整的运行需要进入关卡`Main`然后开始播放.
+> 注意注意注意:<br>
+> 如果使用触屏功能一定要关闭`鼠标用于触控`!<br>
+> ![](https://github.com/dreamrz/Interface/blob/main/touch.JPG)
 
 # 如何配置UMG层级显示
 在引擎资产的根目录下有一个`ConfigData`文件,打开后可配置:<br>
@@ -15,6 +18,9 @@
 
 - `Part1ZOrder` 这是调用globa widget part 1后的层级<br>
 ![](https://github.com/dreamrz/Interface/blob/main/5.jpg)
+
+- `Camera Min FOV` `Camera Max FOV` `Camera Change FOVSpeed` 分别是放大缩小的上限和下限 和 缩放的速度.
+![](https://github.com/dreamrz/Interface/blob/main/7.JPG)
 
 # 交互接口
 ### 关闭人物形象展示.
@@ -30,6 +36,12 @@
 任意地方调用`globa widget part 1`比如:<br>
 ![](https://github.com/dreamrz/Interface/blob/main/6.JPG)
 
+### UMG内的第一个按钮
+任意地方调用`GlobalUINEXT`比如:<br>
+![](https://github.com/dreamrz/Interface/blob/main/9.JPG)
+> 它在这个界面:<br>
+> ![](https://github.com/dreamrz/Interface/blob/main/8.jpg)
+
 # 对方的按钮或事件触发如何获取?
 ### 初始步骤
 1. 引擎里菜单 `编辑` -> `项目设置` -> `地图和模式` -> `游戏实例类` 设置为 `DataGameInstance`
@@ -39,7 +51,7 @@
 ![](https://github.com/dreamrz/Interface/blob/main/returnevent1.JPG)<br>
 当被触发后会执行这里,将需要做的内容按需在后面进行编辑.(对方已不再编辑该蓝图,后续将由操作者自行编辑)
 
-### 返回的事件 `点击人物后`
+### 返回的事件 `ClickPlayer` 点击人物后
 操作的界面:<br>
 ![](https://github.com/dreamrz/Interface/blob/main/button1.JPG)<br>
 
